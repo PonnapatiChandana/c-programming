@@ -1,14 +1,16 @@
-/*write a program to print n natural numbers and their sum*/
+//write a program to find the sum of the digits in the number:
 #include<stdio.h>
 int main(){
-    int n;
-    printf("enter how many numbers you want:");
-    scanf("%d,",&n);
-    for( int i=1;i<=n;i=i+1){
-       printf("%d ",i);  
-    }
-    int sum;
-    sum=(n*(n+1))/2;
-    printf("\n%d is the sum of %d natural numbers",sum,n);
-    return 0;
+  int n;
+  int i;
+  printf("Enter any number:");
+  scanf("%d",&n);
+  int sum=0;
+  while(n>0){
+    i=n%10; 
+    sum=sum+i;
+     n=n/10;
+  }
+  printf("The number of digits in the given number are %d",sum);
+  return 0;
 }
